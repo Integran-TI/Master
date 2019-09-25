@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Applications.IntegranTI.com.Models.Companies>
+@using Applications.IntegranTI.com.Properties
+
+@{
+    ViewBag.Title = Resources.FormTitleList + " " + Resources.TitleCompany;
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<h1>@Resources.TitleCompany</h1>
+<h2>@Resources.FormTitleList</h2>
+<hr />
+
+@using (Html.BeginForm("Add", "Companies", FormMethod.Post))
+{
+    <input type="submit" name="ButtonAdd" value="@Resources.ButtonAdd" formaction="@Url.Action("Add", "Companies") " class="btn btn-dark" />
+
+
+    @Html.Partial("_BarActions")
+
+}
+
+<table class="table table-striped table-hover">
+
+    <tr>
+        <th class="bg-primary text-white">@Resources.Name</th>
+        <th class="bg-primary text-white">@Resources.FullName</th>
+        <th class="bg-primary text-white">&nbsp;</th>
+        <th class="bg-primary text-white">&nbsp;</th>
+        <th class="bg-primary text-white">&nbsp;</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+            <td>@Html.DisplayFor(modelItem => item.FullName)</td>
+            <td>
+                @using (Html.BeginForm("View", "Companies", FormMethod.Post))
+                {
+                    @Html.Hidden("ID_Company", item.ID_Company)
+                    <input type="submit" name="ButtonView" value="@Resources.ButtonView" class="btn btn-outline-dark btn-sm" />
+                }
+            </td>
+
+            <td>
+                @using (Html.BeginForm("Edit", "Companies", FormMethod.Post))
+                {
+                    @Html.Hidden("ID_Company", item.ID_Company)
+                    <input type="submit" name="ButtonEdit" value="@Resources.ButtonEdit" class="btn btn-outline-dark btn-sm" />
+                }
+            </td>
+
+            <td>
+                @using (Html.BeginForm("Delete", "Companies", FormMethod.Post))
+                {
+                    @Html.Hidden("ID_Company", item.ID_Company)
+                    <input type="submit" name="ButtonDelete" value="@Resources.ButtonDelete" class="btn btn-outline-danger btn-sm" />
+                }
+            </td>
+        </tr>
+    }
+
+</table>

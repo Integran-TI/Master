@@ -1,0 +1,38 @@
+﻿@model Applications.IntegranTI.com.Models.Companies
+@using Applications.IntegranTI.com.Properties
+
+@{
+    ViewBag.Title = Resources.FormTitleView + " " + Resources.TitleCompany;
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+@using (Html.BeginForm("View", "Companies", FormMethod.Post, htmlAttributes: new { @class = "form-horizontal" }))
+{
+    @Html.AntiForgeryToken()
+
+    <h1>@Resources.TitleCompany</h1>
+    <h2>@Resources.FormTitleView</h2>
+    <hr />
+
+    <div class="form-group row">
+        <div class="col-md-2">
+            <b>@Html.DisplayNameFor(model => model.Name)</b>
+        </div>
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.Name)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-md-2">
+            <b>@Html.DisplayNameFor(model => model.FullName)</b>
+        </div>
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.FullName)
+        </div>
+    </div>
+
+    @Html.Hidden("ID_Company", Model.ID_Company)
+
+    @Html.Partial("_BarView")
+}

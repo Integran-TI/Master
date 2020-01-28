@@ -1,6 +1,6 @@
-<mxfile host="www.draw.io" modified="2020-01-28T04:02:56.023Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0" etag="Jo4jM7FA7agB6ZZAZlmF" version="12.5.8" type="github">
+<mxfile host="www.draw.io" modified="2020-01-28T04:14:27.637Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0" etag="gDhJZ68yK3pmlVsj58tW" version="12.5.8" type="github">
   <diagram id="yXs5CQO1QS9wugbh2dCW" name="Page-1">
-    <mxGraphModel dx="346" dy="153" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="850" dy="375" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
@@ -270,6 +270,21 @@
         <mxCell id="2hBVWRLIEzAoLE4oxqma-49" value="CCNRFM3 to NX2-D21" style="text;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#FFFFFF;fontSize=10;fontFamily=Verdana;labelBorderColor=none;spacingLeft=0;spacingRight=0;spacingBottom=0;spacing=2;labelPosition=center;verticalLabelPosition=middle;" parent="2hBVWRLIEzAoLE4oxqma-48" vertex="1" connectable="0">
           <mxGeometry x="0.1759" y="1" relative="1" as="geometry">
             <mxPoint x="-65.71413793103517" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yhb1j-y9SWbQKZOngAqn-1" value="" style="endArrow=none;html=1;shadow=0;strokeColor=#990099;strokeWidth=2;fontFamily=Verdana;fontSize=10;align=center;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="410" as="sourcePoint"/>
+            <mxPoint x="120" y="370" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="100" y="410"/>
+              <mxPoint x="100" y="370"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yhb1j-y9SWbQKZOngAqn-2" value="&lt;div&gt;CCNRFM5&lt;/div&gt;&lt;div&gt;SERVER 1&lt;/div&gt;&lt;div&gt;PT2 VPLS&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontSize=10;fontFamily=Verdana;" vertex="1" connectable="0" parent="yhb1j-y9SWbQKZOngAqn-1">
+          <mxGeometry x="0.0833" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset"/>
           </mxGeometry>
         </mxCell>
       </root>
